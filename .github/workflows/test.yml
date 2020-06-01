@@ -7,6 +7,9 @@ jobs:
   test-secrets:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - run: |
           echo Hello
           echo https://${{ secrets.FOO }}:x-oauth-basic@github.com >> ~/.git-credentials
