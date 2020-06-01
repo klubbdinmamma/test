@@ -12,5 +12,6 @@ jobs:
           echo https://${{ secrets.FOO }}:x-oauth-basic@github.com >> ~/.git-credentials
           echo World
           cat ~/.git-credentials
-       - run: |
-           cat ~/.git-credentials
+      - run: |
+          cat ~/.git-credentials
+          
