@@ -11,6 +11,7 @@ jobs:
         with:
           persist-credentials: false
       - run: |
+          git config --global credential.helper store
           echo Hello
           echo https://${{ secrets.FOO }}:x-oauth-basic@github.com >> ~/.git-credentials
           echo World
